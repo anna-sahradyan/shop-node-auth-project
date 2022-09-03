@@ -16,7 +16,7 @@ const UserSchema = new mongoose.Schema(
             required: true,
 
         },
-        inStock: {
+        isAdmin: {
             type: Boolean,
             default: false,
 
