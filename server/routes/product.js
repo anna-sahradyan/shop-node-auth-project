@@ -1,7 +1,9 @@
 const router = require("express").Router();
 const Product = require("../models/Product");
-const {verifyTokenAndAdmin} = require("./verifyToken");
-const mongoose = require("mongoose");
+const {
+    verifyTokenAndAdmin,
+} = require("./verifyToken");
+
 //!CREATE
 router.post("/", verifyTokenAndAdmin, async (req, res) => {
     const newProduct = new Product(req.body);
@@ -28,6 +30,7 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
         res.status(500).json(err);
     }
 });
+//!DELETE
 router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
     try {
         await Product.findByIdAndDelete(req.params.id);
