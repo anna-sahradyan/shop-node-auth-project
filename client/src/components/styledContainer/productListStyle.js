@@ -30,7 +30,7 @@ export const Select = styled.select`
 export const Option = styled.option`
   background-color: #${props => props.color};
 
-`;
+ `;
 export const CheckBox = styled.span`
   display: inline-block;
   display: flex;

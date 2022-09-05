@@ -6,6 +6,7 @@ import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import CategoryItem from "./components/CategoryItem";
 
 
 const App = () => {
@@ -19,9 +20,9 @@ const App = () => {
                 <Route path={'/products/:category'} element={<ProductList/>}/>
                 <Route path={'/product/:id'} element={<Product/>}/>
                 <Route path={'/cart'} element={<Cart/>}/>
-                {user ? navigate("/") : <Login/>}
+                {/*{user ? navigate("/") : <Login/>}*/}
                 <Route path={'/login'} element={<Login/>}/>
-                {user ? navigate("/") : <Register/>}
+                {/*{user ? navigate("/") : <Register/>}*/}
                 <Route path={'/register'} element={<Register/>}/>
 
 
