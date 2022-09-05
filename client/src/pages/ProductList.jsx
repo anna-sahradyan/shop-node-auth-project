@@ -12,13 +12,13 @@ import {useLocation} from "react-router-dom";
 
 const ProductList = () => {
     const [sort, setSort] = useState("newest");
-    const [filter, setFilter] = useState({});
+    const [filters, setFilters] = useState({});
     const location = useLocation();
     const cat = location.pathname.split("/")[2];
     const handleFilters = (e) => {
         const value = e.target.value;
-        setFilter({
-            ...filter,
+        setFilters({
+            ...filters,
             [e.target.name]: value,
         })
     }
@@ -58,7 +58,7 @@ const ProductList = () => {
                 </Filter>
 
             </FilterContainer>
-            <Products cat={cat} filter={filter} sort ={sort}/>
+            <Products cat={cat} filters={filters} sort ={sort}/>
             <NewsLetter/>
             <Footer/>
         </Container>
