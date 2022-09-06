@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Container,
     Image,
@@ -24,9 +24,25 @@ import Announcement from "../components/Announcement";
 import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
 import {Add, Remove} from "@material-ui/icons";
+import {useLocation} from "react-router-dom";
+import axios from "axios";
 
 
 const Product = () => {
+    const location = useLocation();
+    const id = location.pathname.split("/")[2];
+    const [product, setProduct] = useState({});
+    //! get one product
+    useEffect(() => {
+        const getProduct = async () => {
+            try {
+
+
+            } catch (err) {
+                console.log(err)
+            }
+        }
+    }, []);
     return (<>
 
         <Container>
