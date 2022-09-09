@@ -16,6 +16,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import {Badge} from "@material-ui/core";
 import {useSelector} from "react-redux";
 import {selectCart} from "../store/cartRedux";
+import {Link} from "react-router-dom";
 
 
 const Nav = () => {
@@ -40,11 +41,13 @@ const Nav = () => {
                 <Right>
                     <MenuItem>Register</MenuItem>
                     <MenuItem>Sign In </MenuItem>
+                    <Link to={'/cart'}>
                     <MenuItem>
-                        <Badge badgeContent={4} color="primary" overlap="rectangular">
+                        <Badge badgeContent={quantity} color="primary" overlap="rectangular">
                             <ShoppingCartOutlinedIcon/>
                         </Badge>
                     </MenuItem>
+                    </Link>
                 </Right>
             </Wrapper>
         </Container>

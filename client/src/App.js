@@ -20,9 +20,9 @@ const App = () => {
                 <Route path={'/products/:category'} element={<ProductList/>}/>
                 <Route path={'/product/:id'} element={<Product/>}/>
                 <Route path={'/cart'} element={<Cart/>}/>
-                {/*{user ? navigate("/") : <Login/>}*/}
                 <Route path={'/login'} element={<Login/>}/>
-                {/*{user ? navigate("/") : <Register/>}*/}
+                {/*<Route path={'/login'} element={<Login/>}/>*/}
+                {/*{user ? navigate("/") : <Route path={'/register'} element={<Register/>}/>}*/}
                 <Route path={'/register'} element={<Register/>}/>
 
 

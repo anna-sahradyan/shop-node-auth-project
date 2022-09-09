@@ -46,6 +46,7 @@ const Product = () => {
                 const result = await publicRequest.get(`/products/find/ ${id}`);
                 setProduct(result.data)
 
+
             } catch (err) {
                 console.log(err)
             }
@@ -63,7 +64,7 @@ const Product = () => {
 
     }
     const handleClick = () => {
-        dispatch(addProduct({product,quantity}))
+        dispatch(addProduct({...product, quantity,color,size}));
     }
     return (
         <>
@@ -93,9 +94,9 @@ const Product = () => {
                                 <FilterTitle>
                                     Size
                                 </FilterTitle>
-                                <FilterSize>
+                                <FilterSize onChange={(e) => setSize((e.target.value))}>
                                     {product.size?.map((s) => (
-                                        <FilterSizeOption key={s} onChange={() => setSize((s))}>{s}</FilterSizeOption>
+                                        <FilterSizeOption key={s} >{s}</FilterSizeOption>
                                     ))}
 
                                 </FilterSize>
