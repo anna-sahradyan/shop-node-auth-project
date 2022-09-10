@@ -15,15 +15,12 @@ import {
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import {Badge} from "@material-ui/core";
 import {useSelector} from "react-redux";
-import {selectCart} from "../store/cartRedux";
 import {Link} from "react-router-dom";
 
 
 const Nav = () => {
-    const cart = useSelector(selectCart);
     const quantity = useSelector(state=>state.cart.quantity);
-    const total= useSelector(state=>state.cart.total);
-    console.log(total);
+    console.log();
     return (<>
         <Container>
             <Wrapper>
