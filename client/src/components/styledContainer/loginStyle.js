@@ -52,7 +52,11 @@ export const Button = styled.button`
   cursor: pointer;
   font-weight: 500;
   margin-bottom: 10px;
+  &:disabled{
+    color:green;
+    cursor: not-allowed;
+  }
 `;
 export const Error = styled.span`
   color:red;
-`
+`;

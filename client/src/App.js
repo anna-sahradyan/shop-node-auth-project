@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Routes,  useNavigate} from "react-router-dom";
+import {Route, Routes, useNavigate} from "react-router-dom";
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
@@ -8,10 +8,11 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import CategoryItem from "./components/CategoryItem";
 import Success from "./pages/Success";
+import {useSelector} from "react-redux";
 
 
 const App = () => {
-    const user = true;
+    const user = useSelector((state) => state.user.currentUser);
     let navigate = useNavigate();
 
     return (
