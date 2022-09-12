@@ -34,7 +34,7 @@ import {
 } from "../components/styledContainer/cartStyle";
 import {Add, Remove} from "@mui/icons-material";
 import {useSelector} from "react-redux";
-import {selectCart} from "../store/cartRedux";
+import {selectCart} from "../store/cartSlice";
 import StripeCheckout from "react-stripe-checkout";
 import {userRequest} from "../requestMethod";
 import { useNavigate} from "react-router-dom";

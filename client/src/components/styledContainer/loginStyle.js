@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   padding: 20px;
   width: 25%;
   background-color: white;
-  ${mobile({ width:"75%"})}
+  ${mobile({width: "75%"})}
 `;
 export const Title = styled.h1`
   font-size: 24px;
@@ -53,3 +53,6 @@ export const Button = styled.button`
   font-weight: 500;
   margin-bottom: 10px;
 `;
+export const Error = styled.span`
+  color:red;
+`

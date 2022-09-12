@@ -1,9 +1,10 @@
 import {combineReducers} from "@reduxjs/toolkit";
-import cart from "./cartRedux";
-
+import cart from "./cartSlice";
+import user from "./userSlice";
 
 const rooterReducer = combineReducers({
     cart,
-    devTools:true
+    user,
+    devTools: true
 });
 export default rooterReducer;
